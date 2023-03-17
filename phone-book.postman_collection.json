@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "44957cdf-9765-47be-b949-04c390ec3d2d",
+		"name": "phone-book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11099201"
+	},
+	"item": [
+		{
+			"name": "get list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3104/phoneBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3104",
+					"path": [
+						"phoneBook"
+					],
+					"query": [
+						{
+							"key": "searchValue",
+							"value": "annisa",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "820980",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3104/phoneBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3104",
+							"path": [
+								"phoneBook"
+							],
+							"query": [
+								{
+									"key": "searchValue",
+									"value": "annisa",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": "820980",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 23:24:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"name\": \"treby\",\n            \"phoneNumber\": \"0874637820900\",\n            \"createdDate\": null,\n            \"updatedDate\": null,\n            \"delete\": false\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"sorted\": false,\n            \"unsorted\": true,\n            \"empty\": true\n        },\n        \"pageSize\": 100,\n        \"pageNumber\": 0,\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalPages\": 1,\n    \"last\": true,\n    \"totalElements\": 1,\n    \"sort\": {\n        \"sorted\": false,\n        \"unsorted\": true,\n        \"empty\": true\n    },\n    \"numberOfElements\": 1,\n    \"first\": true,\n    \"size\": 100,\n    \"number\": 0,\n    \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3104/phoneBook/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3104",
+					"path": [
+						"phoneBook",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3104/phoneBook/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3104",
+							"path": [
+								"phoneBook",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 23:24:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"treby\",\n    \"phoneNumber\": \"0874637820900\",\n    \"createdDate\": null,\n    \"updatedDate\": null,\n    \"delete\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kim so hyun\",\r\n    \"phoneNumber\":\"625371629\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3104/phoneBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3104",
+					"path": [
+						"phoneBook"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "save",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kim so hyun\",\r\n    \"phoneNumber\":\"625371629\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3104/phoneBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3104",
+							"path": [
+								"phoneBook"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 23:25:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"kim so hyun\",\n    \"phoneNumber\": \"625371629\",\n    \"createdDate\": \"2023-03-16T23:25:04.241+00:00\",\n    \"updatedDate\": null,\n    \"delete\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"kim so hyun\",\r\n    \"phoneNumber\":\"0097462\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3104/phoneBook/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3104",
+					"path": [
+						"phoneBook",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"kim so hyun\",\r\n    \"phoneNumber\":\"0097462\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3104/phoneBook/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3104",
+							"path": [
+								"phoneBook",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 23:25:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"kim so hyun\",\n    \"phoneNumber\": \"0097462\",\n    \"createdDate\": \"2023-03-16T23:25:04.241+00:00\",\n    \"updatedDate\": \"2023-03-16T23:25:29.665+00:00\",\n    \"delete\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3104/phoneBook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3104",
+					"path": [
+						"phoneBook",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3104/phoneBook/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3104",
+							"path": [
+								"phoneBook",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 23:24:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
